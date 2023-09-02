@@ -12,8 +12,12 @@
 %% API
 -export([reverse/1]).
 
-reverse([]) -> [];
-reverse(List) -> reverse(List, []).
+reverse([]) ->
+  [];
+reverse(List) ->
+  reverse(List, []).
 
-reverse([H|[]], Acc) -> [H|Acc];
-reverse([H|T], Acc) -> reverse(T,[H|Acc]).
+reverse([H|[]], Acc) ->
+  [H|Acc];
+reverse([H|T], Acc) ->
+  reverse(T,[H|Acc]).

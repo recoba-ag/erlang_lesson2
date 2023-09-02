@@ -12,7 +12,11 @@
 %% API
 -export([compress/1]).
 
-compress([]) -> [];
-compress([H | []]) -> [H];
-compress([H, H | T]) -> compress([H | T]);
-compress([H | T]) -> [H | compress(T)].
+compress([]) ->
+  [];
+compress([H | []]) ->
+  [H];
+compress([H, H | T]) ->
+  compress([H | T]);
+compress([H | T]) ->
+  [H | compress(T)].

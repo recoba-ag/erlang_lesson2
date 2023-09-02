@@ -12,7 +12,11 @@
 %% API
 -export([flatten/1]).
 
-flatten([]) -> [];
-flatten([[H|T]|T2]) -> flatten([H,T|T2]);
-flatten([[]|T]) -> flatten(T);
-flatten([H|T]) -> [H|flatten(T)].
+flatten([]) ->
+  [];
+flatten([[H|T]|T2]) ->
+  flatten([H,T|T2]);
+flatten([[]|T]) ->
+  flatten(T);
+flatten([H|T]) ->
+  [H|flatten(T)].

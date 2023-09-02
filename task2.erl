@@ -12,7 +12,11 @@
 %% API
 -export([but_last/1]).
 
-but_last([]) -> [];
-but_last([H|[]]) -> [H];
-but_last([H1|[H2|[]]]) -> [H1, H2];
-but_last([_|T]) -> but_last(T).
+but_last([]) ->
+  [];
+but_last([H|[]]) ->
+  [H];
+but_last([H1|[H2|[]]]) ->
+  [H1, H2];
+but_last([_|T]) ->
+  but_last(T).

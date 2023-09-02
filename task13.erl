@@ -12,6 +12,9 @@
 %% API
 -export([decode/1]).
 
-decode([]) -> [];
-decode([{0,_}|T]) -> decode(T);
-decode([{Acc, H}|T]) -> [H|decode([{Acc-1, H}|T])].
+decode([]) ->
+  [];
+decode([{0,_}|T]) ->
+  decode(T);
+decode([{Acc, H}|T]) ->
+  [H|decode([{Acc-1, H}|T])].

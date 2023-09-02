@@ -12,8 +12,12 @@
 %% API
 -export([is_palindrome/1]).
 
-is_palindrome(List) -> is_palindrome(List, [], List).
+is_palindrome(List) ->
+  is_palindrome(List, [], List).
 
-is_palindrome([], Acc, Acc) -> true;
-is_palindrome([Elem | Rest], Acc, RestAcc) -> is_palindrome(Rest, [Elem | Acc], RestAcc);
-is_palindrome(_, _, _) -> false.
+is_palindrome([], Acc, Acc) ->
+  true;
+is_palindrome([Elem | Rest], Acc, RestAcc) ->
+  is_palindrome(Rest, [Elem | Acc], RestAcc);
+is_palindrome(_, _, _) ->
+  false.
